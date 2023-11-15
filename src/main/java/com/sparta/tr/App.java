@@ -9,6 +9,8 @@ public class App {
     public static void main( String[] args ) {
 
         System.out.println((isPalindrome("affa")));
+        String[] theArray = {"civic", "hoooooh", "ronaldo", "eaeca","poooooooooooop", "deada", "mum", "eooooooooooooooooooooooe"};
+        System.out.println(findLongestPalindrome(theArray));
 
     }
 
@@ -31,15 +33,21 @@ public class App {
         }
     }
 
-    //Task 2 - longest palindrome in an array
+//    Task 2 - longest palindrome in an array
 
-//    public static String findLongestPalindrome(String[] palindromeArray){
-//
-//        String finalAnswer;
-//
-//        for(int i = 0; )
-//
-//
-//    }
+    public static String findLongestPalindrome(String[] palindromeArray){
+
+        String finalAnswer = "";
+
+        for(int i = 0; i <= palindromeArray.length - 1; i++){
+
+            if (isPalindrome(palindromeArray[i])){
+                finalAnswer = palindromeArray[i];
+            }
+        }
+
+        return finalAnswer;
+
+    }
 
 }
